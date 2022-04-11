@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-api
+spec:
+  template:
+    metadata:
+    spec:
+      containers:
+      - env:
+        - valueFrom:
+           configMapKeyRef:
+             name: data-cred
+
